@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+/*----------------Homepage Section------------------*/
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.home-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Background Images/home-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.navwrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 25px 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.logo-text {
+  text-decoration: none;
+  color: white;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.navbar li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar li::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.6s ease;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 630px;
+}
+
+.content h1 {
+  font-size: 4vw;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 100px;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  background: url(Background\ Images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+.start {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.63vw;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.start:hover {
+  box-shadow: 0 0 0 1px white;
+  color: white;
+  transform: scale(1.03);
+}
+
+/*----------------Login Section------------------*/
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 500px;
+  background: #1b1b1b;
+  padding: 60px 0;
+  color: var(--text-color1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin-top: 22px;
+}
+
+.form-container .welcome-msg {
+  text-align: center;
+  font-family: "Bona Nova", serif;
+  font-size: 25px;
+  font-style: italic;
+  color: white;
+}
+
+.input-container {
+  margin: 31px auto;
+  width: 80%;
+  border-bottom: 2px solid white;
+  padding-top: 13px;
+  padding-bottom: 5px;
+}
+
+.input-field {
+  width: 90%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-family: "Bona Nova", serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+.input-container .fa {
+  margin-right: 5px;
+  color: white;
+  width: 15px;
+}
+
+.pwd-visibility {
+  position: absolute;
+  cursor: pointer;
+}
+
+#visible {
+  display: none;
+  position: absolute;
+  top: 2px;
+}
+
+#hidden {
+  position: absolute;
+  top: 2px;
+}
+
+#c-visible {
+  display: none;
+  position: absolute;
+  top: 2px;
+}
+
+#c-hidden {
+  position: absolute;
+  top: 2px;
+}
+
+.register {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 80%;
+}
+
+.register a {
+  color: white;
+  font-size: 13px;
+  font-family: "Bona Nova", serif;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.login-btn {
+  margin: 20px 0 20px 50px;
+  width: 80%;
+  outline: none;
+  padding: 10px 0;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Bona Nova", serif;
+  transition: 0.5s ease;
+}
+
+.login-btn:hover {
+  background: transparent;
+  border: 2px solid transparent;
+  color: #ccc;
+  box-shadow: 0 0 0 2px #ccc;
+}
+
+/*----------------Sign Up Section------------------*/
+
+.form-container-signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 665px;
+  width: 500px;
+  background: #1b1b1b;
+  padding: 60px 0;
+  color: var(--text-color1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin-top: 35px;
+}
+
+.form-container-signup .welcome-msg {
+  text-align: center;
+  font-family: "Bona Nova", serif;
+  font-size: 25px;
+  font-style: italic;
+  color: white;
+}
+
+.form-container-signup .signup {
+  text-align: center;
+  font-family: "Bona Nova", serif;
+  font-size: 30px;
+  font-style: italic;
+  color: white;
+}
+
+.signup-btn {
+  margin: 20px 0 20px 50px;
+  width: 80%;
+  outline: none;
+  padding: 10px 0;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Bona Nova", serif;
+  transition: 0.5s ease;
+}
+
+.signup-btn:hover {
+  background: transparent;
+  border: 2px solid transparent;
+  color: #ccc;
+  box-shadow: 0 0 0 2px #ccc;
+}
+
+.redirect {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Bona Nova", serif;
+}
+
+.redirect span a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Bona Nova", serif;
+}
+
+.error-msg {
+  margin-top: 35px;
+  text-align: center;
+  font-family: "Bona Nova", serif;
+  font-size: 20px;
+  color: white;
+}
+
+.input-container .fa-envelope {
+  margin-right: 5px;
+  color: white;
+  width: 15px;
+}
+
+/*----------------Role Select Dropdown Options------------------*/
+
+.form-select {
+  width: 80% !important;
+  margin-bottom: 18px !important;
+  background: #1b1b1b;
+  border: 2px solid white !important;
+  color: #ccc !important;
+  opacity: 0.6;
+}
+
+.form-select:hover {
+  cursor: pointer;
+}
+
+.form-select option {
+  color: white !important;
+}
+
+/*----------------Upload Image Input Field------------------*/
+
+.fileUpload {
+  width: 80% !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/*----------------Result Section------------------*/
+
+main h1 {
+  text-align: center;
+  color: #fff;
+  font-family: "Bona Nova", serif;
+}
+
+.result-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.result-container .result-section {
+  background-color: #1b1b1b;
+  height: 85%;
+  width: 40%;
+  margin-top: 10px;
+}
+
+.result-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.profile {
+  height: 25vh;
+  width: 30%;
+  margin-left: 10px;
+}
+
+.profile img {
+  margin-top: 10px;
+  height: 165px;
+  width: 100%;
+}
+
+.desc {
+  height: 85%;
+  width: 70%;
+}
+
+.desc-wrapper h3 {
+  font-family: "Bona Nova", serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20px;
+}
+
+#votebtn {
+  padding: 5px 20px 5px 20px;
+  margin-top: 30px;
+  margin-left: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #fff;
+  background-color: green;
+}
+
+#voted {
+  padding: 5px 20px 5px 20px;
+  margin-top: 30px;
+  margin-left: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: black;
+  background-color: white;
+}
+
+/*----------------Voting Section------------------*/
+
+main h1 {
+  font-family: "Bona Nova", serif;
+  color: #fff;
+}
+
+.underline {
+  border-top: 3px solid white;
+  margin: auto;
+  width: 30%;
+}
+
+.voting-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 200px;
+}
+
+.voting-container .left-section {
+  background-color: #1b1b1b;
+  height: 85%;
+  width: 40%;
+}
+
+.voting-container .right-section {
+  background-color: #1b1b1b;
+  height: 85%;
+  width: 40%;
+  margin-top: 10px;
+}
+
+.voting-container .v-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 10px;
+  background-color: #1b1b1b;
+  height: 51.5%;
+  width: 17%;
+  position: absolute;
+  top: 200px;
+  left: 325px;
+  border-radius: 5px;
+}
+
+.v-profile b {
+  font-family: "Bona Nova", serif;
+  font-size: 17px;
+  color: #fff;
+}
+
+.v-profile img {
+  width: 70%;
+  height: 40%;
+  margin-left: 13%;
+}
+
+.c-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #1b1b1b;
+  height: 25vh;
+  width: 40%;
+  margin-top: 10px;
+}
+
+/*----------------Edit Info Section------------------*/
+
+.form-container-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 500px;
+  background: #1b1b1b;
+  padding: 60px 0;
+  color: var(--text-color1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin-top: 22px;
+}
+
+.form-container-info .welcome-msg {
+  text-align: center;
+  font-family: "Bona Nova", serif;
+  font-size: 25px;
+  font-style: italic;
+  color: white;
+}
+
+.form-container-info .signup {
+  text-align: center;
+  font-family: "Bona Nova", serif;
+  font-size: 30px;
+  font-style: italic;
+  color: white;
+}
+
+.cancel-btn {
+  padding-left: 15px;
+  padding-top: 20px;
+}
+
+.cancel-btn a {
+  text-decoration: none;
+  font-family: "Bona Nova", serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.cancel-btn a:hover {
+  border-bottom: 2px solid #fff;
+}
